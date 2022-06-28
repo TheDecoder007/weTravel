@@ -2,266 +2,131 @@ const { Comment } = require('../models');
 
 const commentdata = [
   {
-    comment_text: 'Nunc rhoncus dui vel sem.',
+    comment_text: 'This looks so awesome!',
     user_id: 6,
     post_id: 1
   },
   {
-    comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
+    comment_text: 'OMG I want to go there so bad now.',
     user_id: 6,
     post_id: 8
   },
   {
-    comment_text: 'Aliquam erat volutpat. In congue.',
+    comment_text: 'Thanks for posting, this is so cool!',
     user_id: 3,
     post_id: 10
   },
   {
-    comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
+    comment_text: 'Wow this looks like such a great place to visit.',
     user_id: 3,
-    post_id: 18
+    post_id: 8
   },
   {
-    comment_text: 'In hac habitasse platea dictumst.',
+    comment_text: 'Thanks for the tips! Im going there next month.',
     user_id: 7,
     post_id: 5
   },
   {
-    comment_text: 'Vivamus vestibulum sagittis sapien.',
+    comment_text: 'I love the pictures, so beautiful.',
     user_id: 1,
-    post_id: 20
+    post_id: 2
   },
   {
-    comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
+    comment_text: 'This is now on my bucket list thanks to you!',
     user_id: 6,
     post_id: 7
   },
   {
-    comment_text: 'Sed vel enim sit amet nunc viverra dapibus.',
+    comment_text: 'Looks like so much to do here, I need to go!',
     user_id: 7,
     post_id: 4
   },
   {
-    comment_text: 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.',
-    user_id: 6,
-    post_id: 12
-  },
-  {
-    comment_text: 'Morbi a ipsum.',
-    user_id: 6,
-    post_id: 20
-  },
-  {
-    comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
-    user_id: 3,
-    post_id: 14
-  },
-  {
-    comment_text: 'Donec ut mauris eget massa tempor convallis.',
-    user_id: 5,
-    post_id: 4
-  },
-  {
-    comment_text:
-      'Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
-    user_id: 4,
-    post_id: 9
-  },
-  {
-    comment_text:
-      'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
-    user_id: 5,
-    post_id: 14
-  },
-  {
-    comment_text: 'Quisque porta volutpat erat.',
+    comment_text: 'Amazing photos and an amazing place.',
     user_id: 6,
     post_id: 2
   },
   {
-    comment_text: 'Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.',
+    comment_text: 'Love it here.',
+    user_id: 6,
+    post_id: 2
+  },
+  {
+    comment_text: 'One of my favorite places in the world to visit.',
+    user_id: 3,
+    post_id: 4
+  },
+  {
+    comment_text: 'So glad you had a great time.',
+    user_id: 5,
+    post_id: 4
+  },
+  {
+    comment_text: 'Wow! This is incredible.',
+    user_id: 4,
+    post_id: 9
+  },
+  {
+    comment_text: 'Looks so cool, how was the food?',
+    user_id: 5,
+    post_id: 4
+  },
+  {
+    comment_text: 'I had such a good time when I went here too.',
+    user_id: 6,
+    post_id: 2
+  },
+  {
+    comment_text: 'The people here were so friendly!',
     user_id: 8,
     post_id: 2
   },
   {
-    comment_text:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.',
+    comment_text: 'I cant believe how gorgeous it is! Great pics!',
     user_id: 2,
-    post_id: 20
+    post_id: 2
   },
   {
-    comment_text: 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.',
+    comment_text: 'Never thought about going here, but now I NEED to!',
     user_id: 4,
-    post_id: 11
+    post_id: 1
   },
   {
-    comment_text:
-      'Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.',
+    comment_text: 'Looks like you had a great time!',
     user_id: 5,
-    post_id: 13
+    post_id: 3
   },
   {
-    comment_text:
-      'Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
+    comment_text: 'I went here a few years ago, its truly unforgettable.',
     user_id: 9,
-    post_id: 16
+    post_id: 6
   },
   {
-    comment_text: 'Curabitur convallis.',
+    comment_text: 'It truly is one of the most beautiful places.',
     user_id: 6,
     post_id: 4
   },
   {
-    comment_text: 'Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+    comment_text: 'Had the best time of my life here.',
     user_id: 4,
     post_id: 10
   },
   {
-    comment_text: 'Morbi non quam nec dui luctus rutrum.',
+    comment_text: 'I love this place, we go every year.',
     user_id: 3,
     post_id: 8
   },
   {
-    comment_text:
-      'Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique.',
+    comment_text: 'Great recommendations!',
     user_id: 8,
     post_id: 10
   },
   {
-    comment_text:
-      'Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.',
+    comment_text: 'Love this whole area and have never had a bad time.',
     user_id: 1,
-    post_id: 15
-  },
-  {
-    comment_text: 'Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend.',
-    user_id: 5,
-    post_id: 3
-  },
-  {
-    comment_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-    user_id: 1,
-    post_id: 15
-  },
-  {
-    comment_text: 'Nam tristique tortor eu pede.',
-    user_id: 4,
-    post_id: 16
-  },
-  {
-    comment_text: 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
-    user_id: 4,
-    post_id: 18
-  },
-  {
-    comment_text: 'Proin eu mi. Nulla ac enim.',
-    user_id: 4,
-    post_id: 10
-  },
-  {
-    comment_text: 'Sed ante. Vivamus tortor.',
-    user_id: 7,
     post_id: 5
   },
-  {
-    comment_text: 'Aliquam quis turpis eget elit sodales scelerisque.',
-    user_id: 10,
-    post_id: 1
-  },
-  {
-    comment_text: 'Donec quis orci eget orci vehicula condimentum.',
-    user_id: 3,
-    post_id: 19
-  },
-  {
-    comment_text: 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
-    user_id: 5,
-    post_id: 3
-  },
-  {
-    comment_text: 'Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.',
-    user_id: 10,
-    post_id: 14
-  },
-  {
-    comment_text: 'Maecenas ut massa quis augue luctus tincidunt.',
-    user_id: 10,
-    post_id: 8
-  },
-  {
-    comment_text: 'Cras in purus eu magna vulputate luctus.',
-    user_id: 10,
-    post_id: 11
-  },
-  {
-    comment_text: 'Etiam vel augue. Vestibulum rutrum rutrum neque.',
-    user_id: 8,
-    post_id: 5
-  },
-  {
-    comment_text: 'Proin at turpis a pede posuere nonummy.',
-    user_id: 8,
-    post_id: 19
-  },
-  {
-    comment_text: 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.',
-    user_id: 9,
-    post_id: 19
-  },
-  {
-    comment_text:
-      'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
-    user_id: 5,
-    post_id: 4
-  },
-  {
-    comment_text:
-      'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc.',
-    user_id: 2,
-    post_id: 11
-  },
-  {
-    comment_text: 'Vestibulum ac est lacinia nisi venenatis tristique.',
-    user_id: 4,
-    post_id: 6
-  },
-  {
-    comment_text: 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
-    user_id: 9,
-    post_id: 6
-  },
-  {
-    comment_text:
-      'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam.',
-    user_id: 7,
-    post_id: 9
-  },
-  {
-    comment_text: 'Integer ac leo. Pellentesque ultrices mattis odio.',
-    user_id: 4,
-    post_id: 19
-  },
-  {
-    comment_text: 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
-    user_id: 10,
-    post_id: 1
-  },
-  {
-    comment_text:
-      'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.',
-    user_id: 2,
-    post_id: 19
-  },
-  {
-    comment_text: 'Proin risus. Praesent lectus.',
-    user_id: 10,
-    post_id: 1
-  },
-  {
-    comment_text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus.',
-    user_id: 10,
-    post_id: 12
-  }
+
 ];
 
 const seedComments = () => Comment.bulkCreate(commentdata);
