@@ -39,3 +39,35 @@ card-radius {
 .media {
     text-align: center;
 }
+
+.btnText {
+    background-color: gold;
+    color: darkolivegreen;
+    border-radius: 10px;
+   
+}
+
+.btnText:hover {
+    background-color: lightgoldenrodyellow;
+    color: darkolivegreen;
+    border-color: darkolivegreen;
+    box-shadow: 0 0 10px darkolivegreen;
+} 
+.createBtn {
+    text-align-last: center;
+    padding: 10px;
+}
+.sidebar li {
+    padding: 5px;
+    text-align: center;
+}
+.sidebar {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-group {
+    text-align-last: center;
+
+}
