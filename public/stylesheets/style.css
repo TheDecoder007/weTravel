@@ -31,3 +31,11 @@ card-radius {
 .whole-page {
     background-color: lightgoldenrodyellow;
 }
+
+.content {
+    text-align: center;
+}
+
+.media {
+    text-align: center;
+}
