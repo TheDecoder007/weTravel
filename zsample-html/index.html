@@ -9,49 +9,63 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Bulma!</title>
+    <title>weTravel</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+      <link rel = "stylesheet" href="../public/stylesheets/style.css">
   </head>
 
   <body>
-    <!-- MAIN CONTAINER -->
-    <div class="container is-fluid">
-      <!-- NAVBAR ON LEFT -->
-      <div class="columns">
-        <div class="column is-3">
-          <h4>John's Blog</h4>
-          <ul class="navbar">
-            <li class="active"><a href="#section1">Home</a></li>
-            <li><a href="#section2">Friends</a></li>
-            <li><a href="#section3">Family</a></li>
-            <li><a href="#section3">Photos</a></li>
-          </ul>
-          <br />
-          <div class="input-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Search Blog.."
-            />
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            </span>
-          </div>
-        </div>
-        <!-- </div> -->
+    <section class="hero is-small">
+      <div class="hero-body">
+        <h1 class="title is-1 heroTitle">weTravel</h1>
+        <h2 class="subtitle is-4 heroTitle2">
+          Blogs from travelers around the world
+        </h2>
+      </div>
+    </section>
 
-        <!-- CARDS AREA ON RIGHT -->
-        <div class="container is-fluid">
-          <div class="columns is-multiline">
-            <!-- <div class="column is-12"> -->
+    <!-- MAIN CONTAINER -->
+    <section class="whole-page">
+      <div class="container is-fluid">
+        <div class="columns">
+          <!-- NAVBAR ON LEFT -->
+          <!-- <section class="nav-section"> -->
+          <div class="column is-3">
+            <h2><strong>My Blogs</strong></h2>
+            <ul class="sidebar">
+              <!-- <li class="active"><a href="#section1">Home</a></li> -->
+              <li><a href="#section2">This cool blog I did</a></li>
+              <li><a href="#section3">Heres another one</a></li>
+              <li><a href="#section3">This was a great blog</a></li>
+            </ul>
+            <br />
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search Blog.."
+              />
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div>
+          </div>
+          <!-- </section> -->
+          <!-- </div> -->
+
+          <!-- CARDS AREA ON RIGHT -->
+          <!-- <section class = "card-section"> -->
+          <div class="container is-fluid">
+            <div class="column is-12">
+              <div class="columns is-multiline">
+
               <!-- CARD 1 -->
               <div class="column is-one-third">
-                <div class="card size-4">
+                <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img
@@ -70,9 +84,11 @@
 
                     <div class="content">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
+                      Phasellus nec iaculis mauris. 
                       <br />
+                      <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Read Blog</a>
+                      </footer>
                       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                     </div>
                   </div>
@@ -81,7 +97,7 @@
 
               <!-- CARD 2 -->
               <div class="column is-one-third">
-                <div class="card size-4">
+                <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img
@@ -100,18 +116,20 @@
 
                     <div class="content">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
+                      Phasellus nec iaculis mauris. 
                       <br />
+                      <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Read Blog</a>
+                      </footer>
                       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <!-- CARD 4 -->
+              <!-- CARD 3 -->
               <div class="column is-one-third">
-                <div class="card size-4">
+                <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img
@@ -130,25 +148,30 @@
 
                     <div class="content">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a href="#">#css</a> <a href="#">#responsive</a>
+                      Phasellus nec iaculis mauris. 
                       <br />
+                      <footer class="card-footer">
+                        <a href="#" class="card-footer-item">Read Blog</a>
+                      </footer>
                       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- CARD 4 -->
+
               <!-- CARD 5 -->
 
               <!-- CARD 6 -->
+
             </div>
             <!-- END CARD CONTAINER -->
           </div>
         </div>
         <!-- END COLUMNS-->
       </div>
-      <!-- END MAIN CONTAINER-->
-    </div>
+    </section>
+    <!-- END MAIN CONTAINER-->
     <footer class="container-fluid">
       <p>Footer Text</p>
     </footer>
