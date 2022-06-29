@@ -14,4 +14,16 @@
 
 .card {
     margin-top: 20px;
+    
+}
+
+card-radius {
+    size: 0.15rem
+}
+
+.card-footer a {
+    background-color: greenyellow;
+    font-size: large;
+    font-weight: bold;
+    color: darkolivegreen;
 }
