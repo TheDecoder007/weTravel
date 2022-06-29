@@ -2,7 +2,7 @@
 
 .hero-body{
     text-align: center;
-    background-color: greenyellow;
+    background-color: gold;
 }
 .heroTitle {
     color: darkolivegreen;
@@ -22,8 +22,12 @@ card-radius {
 }
 
 .card-footer a {
-    background-color: greenyellow;
+    background-color: gold;
     font-size: large;
     font-weight: bold;
     color: darkolivegreen;
+}
+
+.whole-page {
+    background-color: lightgoldenrodyellow;
 }
