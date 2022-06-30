@@ -12,20 +12,24 @@
     
 }
 
-.card {
+
+/* card-radius {
+    size: 0.15rem
+} */
+
+.blogCard {
     margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px darkolivegreen;
     
 }
-
-card-radius {
-    size: 0.15rem
-}
-
 .card-footer a {
     background-color: gold;
     font-size: large;
     font-weight: bold;
     color: darkolivegreen;
+    border-radius: 10px;
+    box-shadow: 0 0 7px darkolivegreen;
 }
 
 .whole-page {
@@ -44,6 +48,8 @@ card-radius {
     background-color: gold;
     color: darkolivegreen;
     border-radius: 10px;
+    border-color: darkolivegreen;
+    box-shadow: 0 0 7px darkolivegreen;
    
 }
 
@@ -65,6 +71,7 @@ card-radius {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 20px;
 }
 
 .input-group {
@@ -72,6 +79,9 @@ card-radius {
 
 }
 
+.message{
+    box-shadow: 0 0 15px darkolivegreen;
+}
 .message-header {
     background-color: gold;
     color: darkolivegreen;
@@ -86,4 +96,9 @@ card-radius {
 .blogContainer {
     background-color: lightgoldenrodyellow;
     padding-top: 20px;
+}
+
+.createContainer{
+    background-color: lightgoldenrodyellow;
+    
 }
