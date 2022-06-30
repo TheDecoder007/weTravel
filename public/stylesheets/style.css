@@ -71,3 +71,19 @@ card-radius {
     text-align-last: center;
 
 }
+
+.message-header {
+    background-color: gold;
+    color: darkolivegreen;
+}
+
+.message-body{
+    background-color: darkolivegreen;
+    color: lightgoldenrodyellow;
+    font-size: large;
+}
+
+.blogContainer {
+    background-color: lightgoldenrodyellow;
+    padding-top: 20px;
+}
