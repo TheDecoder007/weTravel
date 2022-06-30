@@ -30,8 +30,11 @@
     color: darkolivegreen;
     border-radius: 10px;
     box-shadow: 0 0 7px darkolivegreen;
+    border: 2px solid darkolivegreen;
 }
-
+.card-footer a:hover {
+    background-color: lightgoldenrodyellow;
+}
 .whole-page {
     background-color: lightgoldenrodyellow;
 }
@@ -50,19 +53,31 @@
     border-radius: 10px;
     border-color: darkolivegreen;
     box-shadow: 0 0 7px darkolivegreen;
+    font-weight: bold;
    
 }
 
 .btnText:hover {
     background-color: lightgoldenrodyellow;
     color: darkolivegreen;
-    border-color: darkolivegreen;
+    border-color: gold;
     box-shadow: 0 0 10px darkolivegreen;
+
 } 
 .createBtn {
     text-align-last: center;
     padding: 10px;
 }
+
+/* .control    {
+    background-color: gold;
+    color: darkolivegreen;
+    border-radius: 10px;
+    border-color: darkolivegreen;
+    box-shadow: 0 0 7px darkolivegreen;
+    font-weight: bold;
+} */
+
 .sidebar li {
     padding: 5px;
     text-align: center;
@@ -81,6 +96,8 @@
 
 .message{
     box-shadow: 0 0 15px darkolivegreen;
+    /* border-radius: 15px; */
+    border: 2px solid gold;
 }
 .message-header {
     background-color: gold;
