@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>weTravel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+      <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <style>
+
+
+  </style>
+
+<body>
+  <section class="hero is-small">
+      <div class="hero-body">
+        <h1 class="title is-1 heroTitle">weTravel</h1>
+        <h2 class="subtitle is-4 heroTitle2">
+          Blogs from travelers around the world
+        </h2>
+      </div>
+    </section>
+   <section>
+       {{#if loggedIn}}
+       <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">View My Blogs</a>
+            <a href="#">Create A Blog</a>
+            <a href="#">Log Out</a>
+        </div>
+        {{else}}
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Login</a>
+        </div>
+        {{/if}}
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <script>
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+
+          function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+          }
+        </script>
+   </section> 
+  <div class="wrapper">
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+
+</body>
+
+</html>
