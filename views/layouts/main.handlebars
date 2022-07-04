@@ -8,7 +8,7 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-      <link rel="stylesheet" href="/css/style.css">
+      <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <style>
 
@@ -16,29 +16,21 @@
   </style>
 
 <body>
-  <section class="hero is-small">
-      <div class="hero-body">
-        <h1 class="title is-1 heroTitle">weTravel</h1>
-        <h2 class="subtitle is-4 heroTitle2">
-          Blogs from travelers around the world
-        </h2>
-      </div>
-    </section>
    <section>
        {{#if loggedIn}}
        <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">View My Blogs</a>
+            <a href="/MyBlogs">View My Blogs</a>
             <a href="#">Create A Blog</a>
-            <a href="#">Log Out</a>
+            <button id="logout" class="btn-no-style">logout</button>
         </div>
         {{else}}
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Login</a>
+            <a href="/login">Login</a>
         </div>
         {{/if}}
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+        <span class="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
         <script>
           function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
@@ -49,6 +41,14 @@
           }
         </script>
    </section> 
+  <section class="hero is-small">
+      <div class="hero-body">
+        <h1 class="title is-1 heroTitle">weTravel</h1>
+        <h2 class="subtitle is-4 heroTitle2">
+          Blogs from travelers around the world
+        </h2>
+      </div>
+    </section>
   <div class="wrapper">
     <main>
       {{{ body }}}
@@ -57,6 +57,10 @@
       Thanks for visiting!
     </footer>
   </div>
+
+    {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 
 </body>
 
