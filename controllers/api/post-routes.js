@@ -68,7 +68,6 @@ router.get('/:id', (req, res) => {
     });
 });
 router.post('/', (req, res) => {
-  
   Post.create({
     travel_pic: req.body.image,
     title: req.body.title,

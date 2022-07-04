@@ -86,7 +86,6 @@ router.post('/login', (req, res) => {
     }
 
     req.session.save(() => {
-    
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
@@ -97,7 +96,6 @@ router.post('/login', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-
   User.update(req.body, {
     individualHooks: true,
     where: {
