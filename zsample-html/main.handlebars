@@ -16,25 +16,6 @@
   </style>
 
 <body>
-      <section class="hero is-small">
-      <div class="hero-body">
-        <img
-          src="https://i.imgur.com/XOqnGTY.png"
-          alt="weTravel logo"
-        />
-        
-        <h2 class="subtitle is-4 heroTitle2">
-          Blogs from travelers around the world
-        </h2>
-      </div>
-    </section>
-
-     <!-- MAIN CONTAINER -->
-    <section class="whole-page">
-      <div class="container is-fluid">
-        <div class="columns is-desktop">
-
- <div class="column is-narrow">
    <section>
        {{#if loggedIn}}
        <div id="mySidenav" class="sidenav">
@@ -60,32 +41,31 @@
           }
         </script>
    </section> 
- </div>
-
-{{!-- CARD AREA --}}
-{{!-- <div class="wrapper"> --}}
-   <div class="container is-fluid">
-    <div class="column is-12">
-        <div class="columns is-multiline">
-
+  <section class="hero is-small">
+      <div class="hero-body">
+        <img
+          src="https://i.imgur.com/XOqnGTY.png"
+          alt="weTravel logo"
+        />
+        
+        <h2 class="subtitle is-4 heroTitle2">
+          Blogs from travelers around the world
+        </h2>
+      </div>
+    </section>
+  <div class="wrapper">
     <main>
       {{{ body }}}
     </main>
-          </div>
-        </div>
-    </div>
-{{!-- </div> --}}
-    <footer class="container-fluid">
-      <p>Travel Well!</p>
+    <footer>
+      Thanks for visiting!
     </footer>
-            </div>
-        </div>
-    </div>
-</section>
+  </div>
+
     {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
-    
+
 </body>
 
 </html>
