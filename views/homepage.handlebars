@@ -1,4 +1,11 @@
+    <section class="whole-page">
+      <div class="container is-fluid">
+        <div class="columns is-desktop">
 
+         <div class="container is-fluid">
+    <div class="column is-12">
+        <div class="columns is-multiline">
+         
           <!-- CARD -->
                 
                 {{#each posts as |post|}}
@@ -24,7 +31,7 @@
                       <br />
                       <time> {{format_date_created_at}} </time>
                       <footer class="card-footer">
-                        <a href="{{post_url}}" class="card-footer-item">Read Blog</a>
+                        <a href= 'post/'{{post_id}} class="card-footer-item">Read Blog</a>
                       </footer>
                     </div>
                   </div>
@@ -32,6 +39,12 @@
               </div>
                 {{/each}}
 
+        </div>
+    </div>
+         </div>
+        </div>
+      </div>
+    </section>
 
 
 
