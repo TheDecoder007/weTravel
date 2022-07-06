@@ -7,7 +7,8 @@ router.get('/', (req, res) => {
     order: [['created_at', 'DESC']],
  attributes: [
    'id',
-   
+   'description',
+   'filename',
    'post_url',
    'title',
    'created_at',
@@ -69,10 +70,11 @@ router.get('/:id', (req, res) => {
 });
 router.post('/', (req, res) => {
   Post.create({
-    travel_pic: req.body.image,
+    filename: req.body.filename,
     title: req.body.title,
     post_url: req.body.post_url,
-    user_id: req.body.user_id
+    user_id: req.body.user_id,
+    description: req.body.description
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
