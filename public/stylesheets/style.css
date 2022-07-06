@@ -1,7 +1,11 @@
 :root {
-    --primary-color: gold;
-    --secondary-color: darkolivegreen;
-    --background-color: lightgoldenrodyellow;
+    --primary-color: skyblue;
+    --secondary-color: white;
+    --background-color: #f6d7b0;
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
   }
   
   .hero-body{
