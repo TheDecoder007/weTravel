@@ -56,9 +56,7 @@ Post.init(
       blog_body: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-          isURL: true
-        }
+        
       },
     
     
