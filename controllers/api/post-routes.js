@@ -1,44 +1,42 @@
 const router = require('express').Router();
-const { Post, User, Vote, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
+const { Post, User, Comment, Vote } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-
+// get all users
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
-    order: [['created_at', 'DESC']],
- attributes: [
-   'id',
-   'description',
-   'filename',
-   'blog_body',
-   'title',
-   'created_at',
-   [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
- ],
- include: [
-   // include the Comment model here:
-   {
-     model: Comment,
-     attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-     include: {
-       model: User,
-       attributes: ['username']
-     }
-   },
-   {
-     model: User,
-     attributes: ['username']
-   }
- ]
-})
+    attributes: [
+      'id',
+      'description',
+      'filename',
+      'title',
+      'created_at',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
-
 });
+
 router.get('/:id', (req, res) => {
   Post.findOne({
     where: {
@@ -46,12 +44,20 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'blog_body',
+      'description',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
       {
         model: User,
         attributes: ['username']
@@ -70,13 +76,12 @@ router.get('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-router.post('/', (req, res) => {
+
+router.post('/', withAuth, (req, res) => {
   Post.create({
-    filename: req.body.filename,
     title: req.body.title,
-    blog_body: req.body.blog_body,
-    user_id: req.body.user_id,
-    description: req.body.description
+    description: req.body.description,
+    user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -84,22 +89,18 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-// PUT /api/posts/upvote
-router.put('/upvote', (req, res) => {
-  // make sure the session exists first
-  if (req.session) {
-    // pass session id along with all destructured properties on req.body
-    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-      .then(updatedVoteData => res.json(updatedVoteData))
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  }
+
+router.put('/upvote', withAuth, (req, res) => {
+  // custom static method created in models/Post.js
+  Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+    .then(updatedVoteData => res.json(updatedVoteData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
-    
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title
@@ -112,7 +113,7 @@ router.put('/:id', (req, res) => {
   )
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No  blog post found with this id' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -122,7 +123,9 @@ router.put('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
-router.delete('/:id', (req, res) => {
+
+router.delete('/:id', withAuth, (req, res) => {
+  console.log('id', req.params.id);
   Post.destroy({
     where: {
       id: req.params.id
@@ -130,7 +133,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No blog post found with this id' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -140,4 +143,5 @@ router.delete('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 module.exports = router;
