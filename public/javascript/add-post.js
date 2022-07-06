@@ -21,11 +21,12 @@ async function addPostHandler(event) {
         });
       
         if (response.ok) {
-          document.location.reload();
+          document.location.reload('dashboard');
         } else {
           alert(response.statusText);
         }
       }
   
   
-  document.querySelector('.blog-form').addEventListener('submit', addPostHandler);
+  //document.querySelector('.blog-form').addEventListener('submit', addPostHandler);
+  document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
