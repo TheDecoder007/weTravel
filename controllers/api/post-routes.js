@@ -7,9 +7,10 @@ router.get('/', (req, res) => {
     order: [['created_at', 'DESC']],
  attributes: [
    'id',
-   
-   'post_url',
    'title',
+   'description',
+   'filename',
+   'post_url',
    'created_at',
    [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
  ],
