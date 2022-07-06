@@ -18,10 +18,12 @@
 <body>
       <section class="hero is-small">
       <div class="hero-body">
+        <a href="/">
         <img
           src="https://i.imgur.com/XOqnGTY.png"
           alt="weTravel logo"
         />
+        </a>
         
         <h2 class="subtitle is-4 heroTitle2">
           Blogs from travelers around the world
@@ -39,8 +41,9 @@
        {{#if loggedIn}}
        <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/Dashboard">View My Blogs</a>
-            <a href="#">Create A Blog</a>
+            <a href="/">Home</a>
+            <a href="/myblogs">View My Blogs</a>
+            <a href="/createblog">Create A Blog</a>
             <button id="logout" class="btn-no-style">logout</button>
         </div>
         {{else}}
