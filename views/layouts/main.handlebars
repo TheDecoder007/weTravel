@@ -67,24 +67,28 @@
 
 {{!-- CARD AREA --}}
 {{!-- <div class="wrapper"> --}}
+
+    {{!-- <section>
    <div class="container is-fluid">
     <div class="column is-12">
-        <div class="columns is-multiline">
+        <div class="columns is-multiline"> --}}
+<main>
 
-    <main>
       {{{ body }}}
-    </main>
-          </div>
+    
+</main>
+          {{!-- </div>
         </div>
     </div>
+    </section> --}}
 {{!-- </div> --}}
-    <footer class="container-fluid">
-      <p>Travel Well!</p>
-    </footer>
             </div>
         </div>
     </div>
 </section>
+    <footer class="container-fluid">
+      <p>Travel Well!</p>
+    </footer>
     {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}

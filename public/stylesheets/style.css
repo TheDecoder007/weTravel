@@ -114,7 +114,7 @@
   
   .message-body{
     background-color: var(--secondary-color);
-    color: var(--background-color);
+    color: darkblue;
     font-size: large;
   }
   
