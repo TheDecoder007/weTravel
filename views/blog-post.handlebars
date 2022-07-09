@@ -1,54 +1,52 @@
-
-
 <form class="blog-form">
 
-<div class = "container is-fluid createContainer">
-      <h1>Create your blog</h1>
-        <div class="field">
-          <label class="label">Title</label>
-            <div class="control">
-              <input class="input" id= "post-title" type="text" placeholder="Title of your blog">
-            </div>
-        </div>
+  <div class="container is-fluid createContainer">
+    <h1>Create your blog</h1>
+    <div class="field">
+      <label class="label">Title</label>
+      <div class="control">
+        <input class="input" id="post-title" type="text" placeholder="Title of your blog">
+      </div>
+    </div>
 
-        <div class="field">
-          <label class="label">Description</label>
-            <div class="control">
-              <input class="input" id = "post-description" type="text" placeholder="Short description of your blog">
-            </div>
-        </div>
-      
-        <div class="field">
-          <label class="label">Blog</label>
-            <div class="control">
-              <input class="input" id = "post-blog_body" type = "text" rows = "10" placeholder="Write your blog here"></input>
-            </div>
-        </div>
+    <div class="field">
+      <label class="label">Description</label>
+      <div class="control">
+        <input class="input" id="post-description" type="text" placeholder="Short description of your blog">
+      </div>
+    </div>
 
-        <div class="file">
-          <label class="file-label">
-            <input class="file-input" id = "post-filename" type="file" name="resume">
-              <span class="file-cta">
-                <span class="file-icon">
-                  <i class="fas fa-upload"></i>
-                </span>
-                <span class="file-label">
-                  Choose an image...
-                </span>
-              </span>
-          </label>
-        </div>
-        </br>
+    <div class="field">
+      <label class="label">Body</label>
+      <div class="control">
+        <input class="input" id="post-blog-body" type="text" placeholder="Write your blog here...">
+      </div>
+    </div>
 
-        <div class="field is-grouped">
-          <div class="control">
-            <input class="button blog_form" type="submit" value="Submit"></input>
-          </div>
-          <div class="control">
-            <a class="button is-link" href = "/">Go Back</a>
-          </div>
-        </div>
+    <div class="file">
+      <label class="file-label">
+        <input class="file-input" id="post-filename" type="file" name="resume">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Choose an image...
+          </span>
+        </span>
+      </label>
+    </div>
+    </br>
+
+    <div class="field is-grouped">
+      <div class="control">
+        <input class="button blog-form" type="submit" value="Submit"></input>
+      </div>
+      <div class="control">
+        <a class="button is-link" href="/">Go Back</a>
+      </div>
+    </div>
+  </div>
 </form>
 
-    {{!-- </div> --}}
-
+<script src="/javascript/add-post.js"></script>

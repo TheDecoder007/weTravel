@@ -4,6 +4,21 @@ const { Post, User, Comment, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all posts for dashboard
+router.post('/', (req, res) => {
+  
+  Post.create({
+    title: req.body.title,
+    description : req.body.description,
+    filename: req.body.filename,
+    body: req.body.blog_body,
+    
+  })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
