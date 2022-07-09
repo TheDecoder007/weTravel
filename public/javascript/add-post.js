@@ -27,8 +27,4 @@ async function addPostHandler(event) {
   }
 }
 
-document.querySelector('#create-post').addEventListener('click', addPostHandler);
-
-document.querySelector('#test').addEventListener('click', function(){
-  console.log("WORKED")
-});
+document.querySelector('#create-post').addEventListener('submit', addPostHandler);
