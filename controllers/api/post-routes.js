@@ -98,7 +98,7 @@ router.post('/', withAuth, (req, res) => {
     description : req.body.description,
     filename: req.body.filename,
     blog_body: req.body.blog_body,
-    
+    user_id: req.session.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
