@@ -14,7 +14,7 @@
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img
-                        src= "{{filename}}"
+                        src= {{filename}}
                         alt="Placeholder image"
                       />
                     </figure>
@@ -27,11 +27,11 @@
                       </div>
                     </div>
                     <div class="content">
-                      {{description}}
+                      {{description}} 
                       <br />
                       <time> {{format_date_created_at}} </time>
                       <footer class="card-footer">
-                        <a href= 'post/'{{post_id}} class="card-footer-item">Read Blog</a>
+                        <a href= 'post/{{id}}' class="card-footer-item" id={{id}}>Read Blog</a>
                       </footer>
                     </div>
                   </div>
