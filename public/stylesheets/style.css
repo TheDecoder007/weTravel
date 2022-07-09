@@ -125,10 +125,11 @@
   
   .createContainer{
     background-color: var(--background-color);
+    padding-bottom: 20px;
     
   }
   
-  .menuu {
+  .menu {
     background-color: var(--primary-color);
   }
   
@@ -139,7 +140,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: navy;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -173,4 +174,34 @@
   
   form label {
     display: block;
+  }
+
+  .logoutBtn {
+    background-color: var(--primary-color);
+    font-size: large;
+    font-weight: bold;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 7px var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    margin-left: 75px;
+    margin-top: 20px;
+  }
+
+  .logoutBtn:hover {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+  }
+
+  .footer {
+    background-color: navy;
+    color: white;
+    font-size: larger;
+    padding-top: 20px;
+  }
+
+  .mainCont {
+    padding-bottom: 20px;
   }

@@ -33,7 +33,7 @@
 
 
 
- <div class="column is-narrow">
+ <div class="column is-narrow menu">
    <section>
        {{#if loggedIn}}
        <div id="mySidenav" class="sidenav">
@@ -41,7 +41,7 @@
             <a href="/">Home</a>
             <a href="/myblogs">View My Blogs</a>
             <a href="/createblog">Create A Blog</a>
-            <button id="logout" class="btn-no-style">logout</button>
+            <button id="logout" class="btn-no-style logoutBtn">Logout</button>
         </div>
         {{else}}
         <div id="mySidenav" class="sidenav">
@@ -69,7 +69,7 @@
     
 </main>
  
-    <footer class="container-fluid">
+    <footer class="container-fluid footer">
       <p>Travel Well!</p>
     </footer>
     {{#if loggedIn}}
