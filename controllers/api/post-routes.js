@@ -91,14 +91,17 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", withAuth, (req, res) => {
+router.post('/', withAuth, (req, res) => {
+  
   Post.create({
     title: req.body.title,
-    description: req.body.description,
-    user_id: req.session.user_id,
+    description : req.body.description,
+    filename: req.body.filename,
+    blog_body: req.body.blog_body,
+    
   })
-    .then((dbPostData) => res.json(dbPostData))
-    .catch((err) => {
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
