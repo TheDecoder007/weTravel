@@ -17,7 +17,7 @@ async function getPostHandler(event) {
 //     window.location.toString().split("/").length - 1
 //   ];
 
-  const response = await fetch("/api/posts/:id", {
+  const response = await fetch("/api/post/:id", {
     method: "get",
     body: JSON.stringify({
       post_id,
