@@ -13,7 +13,7 @@ async function editFormHandler(event) {
     method: 'PUT',
     body: JSON.stringify({
       description,
-      filename,
+      
       blog_body,
       title
     }),
