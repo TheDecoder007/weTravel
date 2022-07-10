@@ -53,17 +53,20 @@
         <script>
           function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.opacity = 0.65;
           }
 
           function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.opacity = 1;
+
           }
         </script>
    </section> 
  </div>
 
 
-<main>
+<main id="main">
 
       {{{ body }}}
     
