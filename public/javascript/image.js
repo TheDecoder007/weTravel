@@ -1,13 +1,48 @@
-require('dotenv').config();
-const cloudinary = require('cloudinary').v2;
+function showUploadWidget() {
+    cloudinary.openUploadWidget({
+       cloudName: "dfe8l6xnx",
+       uploadPreset: "wetravel",
+       sources: [
+           "local",
+           "url",
+           "instagram"
+       ],
+       googleApiKey: "<image_search_google_api_key>",
+       showAdvancedOptions: true,
+       cropping: true,
+       multiple: false,
+       defaultSource: "local",
+       styles: {
+           palette: {
+               window: "#FFFFFF",
+               windowBorder: "#90A0B3",
+               tabIcon: "#0078FF",
+               menuIcons: "#5A616A",
+               textDark: "#000000",
+               textLight: "#FFFFFF",
+               link: "#0078FF",
+               action: "#FF620C",
+               inactiveTabIcon: "#0E2F5A",
+               error: "#F44235",
+               inProgress: "#0078FF",
+               complete: "#20B832",
+               sourceBg: "#E4EBF1"
+           },
+           fonts: {
+               default: {
+                   active: true
+               }
+           }
+       }
+   },
 
-const image = document.querySelector('input[name="image"]').value();
-
-cloudinary.uploader.upload(image)
-.then(result => {
-    const filename = (result.url)
+   (error, result) => {
+    if (result.event === "success") {
+    console.log(result.info.secure_url)
+    const filename = (result.info.secure_url)
     console.log(filename)
-})
-.catch(error => {console.log(error)});
+    }
+});
 
-document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+
+    }
