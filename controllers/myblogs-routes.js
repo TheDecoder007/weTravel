@@ -49,6 +49,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     attributes: [
       'id',
       'description',
+      'blog_body',
       'title',
       'filename',
       'created_at',
