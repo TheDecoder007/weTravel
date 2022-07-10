@@ -1,57 +1,70 @@
+<article>
 
-      
-    <div class="container is-fluid blogContainer">
-      <div class = "columns">
-        <div class = "column is-three-fifths is-offset-one-fifth">
-         
-  
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Title
-  </h2>
-  <form class="edit-post-form">
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
+  <div class="container is-fluid blogContainer">
+    <div class="columns">
+      <div class="column is-three-fifths is-offset-one-fifth">
+
+
+        <a href="/dashboard"> &larr; Back to dashboard</a>
+        <h2>
+          Edit Title
+        </h2>
+        <form class="edit-post-form">
+          <div class="field">
+          <div class="control">
+            <input class="input" id="post-title" type="text" value="{{post.title}}" >
+          </div>
+          </div>
+          <h2>
+            Edit Description
+          </h2>
+          <div class="field">
+          <div class="control">
+            <input class="input" id="post-description" type="text" value="{{post.description}}" >
+          </div>
+          </div>
+          <h2>
+            Edit Body
+          </h2>
+          <div class="field"></div>
+          <div class="control">
+            <input class="input" id="post-blog-body" type="text" value="{{post.blog_body}}" >
+          </div>
+          <div class="field-is-grouped">
+            <div class="control">
+            <input class="button edit-post-form" type="submit" value="Save post"></input>
+            </div>
+            <input class="button delete-post-btn" type="button" value="Delete post"></input>
+            </div>
+          {{!-- <div>
+            {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
+            |
+            <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+          </div> --}}
+        </form>
+
+        <form class="comment-form">
+          <h2>
+            Add Comment
+          </h2>
+          <div>
+            <textarea name="comment-body"></textarea>
+          </div>
+
+          
+            
+          
+          <div>
+            <button type="submit">add comment</button>
+          </div>
+      </div>
     </div>
-     <h2>
-    Edit Description
-  </h2>
-  <div>
-     <input name="post-description" type="text" value="{{post.description}}" />
-</div>
-    <h2>
-    Edit Body
-  </h2>
-  <textarea name="post-body" type="text" rows = 10 value="{{post.blog_body}}" ></textarea>
-    {{!-- <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
-    </div> --}}
+  </div>
   </form>
+</article>
 
-<form class="comment-form">
-   <h2>
-    Add Comment
-  </h2>
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</div>
-  </div>
-  </div>
- 
-</form>
-
-
-{{!-- {{> comments post.comments}} --}}
-
-<script src="/javascript/edit-post.js"></script>
+{{> comments post.comments}}
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/edit-posts.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
