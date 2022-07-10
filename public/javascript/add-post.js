@@ -55,7 +55,8 @@ async function addPostHandler(event) {
 
 
   const description = document.querySelector('input[id="post-description"]').value;
-  const filename = document.querySelector('input[id="post-filename"]').value;
+  //const filename = document.querySelector('input[id="post-filename"]').value;
+  const filename = document.getElementById("uploadedimage").src;
   const blog_body = document.querySelector('input[id="post-blog-body"]').value;
   const title = document.querySelector('input[id="post-title"]').value;
 
