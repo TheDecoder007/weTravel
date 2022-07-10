@@ -124,6 +124,10 @@ router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
+      description : req.body.description,
+      filename: req.body.filename,
+      blog_body: req.body.blog_body,
+      user_id: req.session.user_id
     },
     {
       where: {
