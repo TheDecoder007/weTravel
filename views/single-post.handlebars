@@ -16,6 +16,24 @@
               </p>
             </div>
           </article>
+
+          {{#each post.comments}}
+          <article class="message comments">
+            <div class="message-header comment">
+              <p>
+              {{user.username}} commented on {{format_date created_at}}
+            </p>
+        
+            </div>
+            <div class="message-body text">
+              <p>
+                {{comment_text}}
+                </p>
+            </div>
+            
+          </article>
+            {{/each}}
+
     
             <div class="field">
               <label class="label">Comment</label>
@@ -34,5 +52,3 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
