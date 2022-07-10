@@ -117,7 +117,7 @@
   }
   .message-header {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: navy;
   }
   
   .message-body{
