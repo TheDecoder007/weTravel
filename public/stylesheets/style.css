@@ -31,6 +31,10 @@
     box-shadow: 0 0 10px var(--secondary-color);
     
   }
+
+  .card-content {
+    color: navy;
+  }
   .card-footer a {
     background-color: var(--primary-color);
     font-size: large;
@@ -134,20 +138,26 @@
      position: fixed;
      position: sticky;
      top: 0;
-     z-index: 9999;
+     z-index: 9998;
+     color: navy;
+  }
+
+  .menu:hover {
+    color: var(--secondary-color);
   }
   
   .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: navy;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    z-index: 9999;
+    box-shadow: 0 0 20px white;
 
   }
   
@@ -162,6 +172,7 @@
   
   .sidenav a:hover {
     color: var(--secondary-color);
+    /* box-shadow: 0 0 10px --secondary-color; */
   }
   
   .sidenav .closebtn {
@@ -210,5 +221,7 @@
   .mainCont {
     padding-bottom: 20px;
   }
+
+  
 
  

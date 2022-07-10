@@ -1,13 +1,56 @@
-{{#if posts.length}}
-<section>
+   <section class="whole-page">
+      <div class="container is-fluid">
   <h2>Your Posts</h2>
-  <ol>
+        <div class="columns is-desktop">
+
+
+         <div class="container is-fluid mainCont">
+    <div class="column is-12">
+        <div class="columns is-multiline">
+
+{{#if posts.length}}
+
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+
+      {{!-- {{> post-info post}} --}}
+      <div class="column is-one-third">
+                <div class="card blogCard">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img
+                        src= {{filename}}
+                        alt="Placeholder image"
+                      />
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-content">
+                        <p class="title is-4">{{title}}</p>
+                        <p class="subtitle is-6">{{user.username}}</p>
+                      </div>
+                    </div>
+                    <div class="content">
+                      {{description}} 
+                      <br />
+                      <time> {{format_date_created_at}} </time>
+                      <footer class="card-footer cardBtn">
+                        <a href= "/dashboard/edit/{{post.id}}" class="edit-link card-footer-item">Edit post</a>
+                      </footer>
+                    </div>
+                  </div>
+                </div>    <!--END CARD-->
+              </div>
+      {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+    
     {{/each}}
-  </ol>
-</section>
+
+</>
 {{/if}}
+
+        </div>
+    </div>
+         </div>
+        </div>
+      </div>
+   </section>
