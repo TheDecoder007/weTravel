@@ -131,6 +131,10 @@
   
   .menu {
     background-color: var(--primary-color);
+     position: fixed;
+     position: sticky;
+     top: 0;
+     z-index: 9999;
   }
   
   .sidenav {
@@ -144,6 +148,7 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+
   }
   
   .sidenav a {
@@ -205,3 +210,9 @@
   .mainCont {
     padding-bottom: 20px;
   }
+
+  /* .navsec {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  } */
