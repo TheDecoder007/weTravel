@@ -38,8 +38,11 @@ function showUploadWidget() {
   
   if (!error && result && result.event === "success") {
     console.log("Done! Here is the image info: ", result.info);
-    const filename = (result.info.secure_url);
+    var filename = (result.info.secure_url);
     console.log(filename);
+    document
+        .getElementById("uploadedimage")
+        .setAttribute("src", result.info.secure_url);
   }
  });
 
@@ -52,7 +55,7 @@ async function addPostHandler(event) {
 
 
   const description = document.querySelector('input[id="post-description"]').value;
-  //const filename = document.querySelector('input[id="post-filename"]').value;
+  const filename = document.querySelector('input[id="post-filename"]').value;
   const blog_body = document.querySelector('input[id="post-blog-body"]').value;
   const title = document.querySelector('input[id="post-title"]').value;
 
