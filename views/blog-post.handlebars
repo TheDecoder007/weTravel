@@ -19,13 +19,18 @@
     <div class="field">
       <label class="label">Body</label>
       <div class="control">
-        <input class="input" id="post-blog-body" type="text" placeholder="Write your blog here...">
+        <textarea class="textarea" id="post-blog-body" rows = 10 type="text" placeholder="Write your blog here..."></textarea>
       </div>
     </div>
-
 </form>
 
-<input id="clickMe" type="button" value="clickme" onclick="showUploadWidget();" />
+
+
+  <div class="control">
+    <div class="button">
+<input class="button" id="clickMe" type="submit" value="Upload Image" onclick="showUploadWidget();" />
+  </div>
+    </div>
     <img  
       id="uploadedimage" 
       src="">
@@ -39,7 +44,7 @@
         <a class="button is-link" href="/">Go Back</a>
       </div>
     </div>
-  </div>
+  
 
 
 
