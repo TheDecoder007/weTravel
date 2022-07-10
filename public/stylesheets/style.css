@@ -226,6 +226,31 @@
     padding-bottom: 20px;
   }
 
-  
+  .label {
+    color: navy;
+    padding-top: 10px;
+  }
 
- 
+  .head {
+    color: navy;
+    justify-content: center;
+    text-align: center;
+    font-size: x-large;
+    padding-top: 10px;
+  }
+
+ .button {
+  background-color: navy;
+  font-size: large;
+  /* font-weight: bold; */
+  color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0 0 7px var(--secondary-color);
+  border: 2px solid var(--background-color);
+ }
+
+ .button:hover {
+  color: var(--background-color);
+  border: 3px solid var(--secondary-color);
+
+ }
