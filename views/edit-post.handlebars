@@ -1,4 +1,4 @@
-<article>
+
       
     <div class="container is-fluid blogContainer">
       <div class = "columns">
@@ -22,9 +22,7 @@
     <h2>
     Edit Body
   </h2>
-  <div>
-     <input name="post-body" type="text" value="{{post.blog_body}}" />
-</div>
+  <textarea name="post-body" type="text" rows = 10 value="{{post.blog_body}}" ></textarea>
     {{!-- <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
       |
@@ -45,13 +43,14 @@
   <div>
     <button type="submit">add comment</button>
   </div>
+</div>
   </div>
   </div>
-  </div>
+ 
 </form>
-</article>
 
-{{> comments post.comments}}
+
+{{!-- {{> comments post.comments}} --}}
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
