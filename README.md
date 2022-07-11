@@ -17,7 +17,7 @@ A blog site for travel lovers to show each other the world
 ## Links
 GitHub link https://github.com/TheDecoder007/weTravel
 
-Deploy link:
+Deploy link: https://murmuring-reef-03220.herokuapp.com/
 
 ### Other Info
 * Anyone can view blogs on the site
