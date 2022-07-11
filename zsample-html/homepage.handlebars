@@ -1,16 +1,23 @@
-    <section class="whole-page">
+
+
+{{!-- <section class="whole-page">
       <div class="container is-fluid">
         <div class="columns is-desktop">
+          <div class="column is-narrow"> --}}
 
-         <div class="container is-fluid mainCont">
-    <div class="column is-12">
-        <div class="columns is-multiline">
-         
-          <!-- CARD -->
+            <div class="container is-fluid">
+            <div class="column is-12">
+              <div class="columns is-multiline">
+              <div class="column is-one-third">
+
+          <!-- CARD 1 -->
+
+
+
                 
                 {{#each posts as |post|}}
-              <div class="column is-one-third">
                 <div class="card blogCard">
+
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img
@@ -26,26 +33,25 @@
                         <p class="subtitle is-6">{{user.username}}</p>
                       </div>
                     </div>
+
                     <div class="content">
-                      {{description}} 
+                      {{description}}
                       <br />
                       <time> {{format_date_created_at}} </time>
-                      <footer class="card-footer cardBtn">
-                        <a href= 'post/{{id}}' class="card-footer-item" id={{id}}>Read Blog</a>
+                      <footer class="card-footer">
+                        <a href="{{post_url}}" class="card-footer-item">Read Blog</a>
                       </footer>
                     </div>
                   </div>
                 </div>    <!--END CARD-->
-              </div>
                 {{/each}}
+                
+              </div>
+                </div>
+                </div> 
 
-        </div>
-    </div>
-         </div>
+              </div>
+          {{!-- </div>
         </div>
       </div>
-    </section>
-
-
-
-
+    </section> --}}

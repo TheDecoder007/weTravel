@@ -2,117 +2,143 @@ const { Post } = require('../models');
 
 const postdata = [
   {
-    title: 'Cruising into Cuba',
-    // filename: 'xx.jpg',
-    post_url: 'https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
+    user_id: 10
+  },
+  {
+    title: 'Cruising in Cuba',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
+    user_id: 8
+  },
+  {
+    title: 'Big Sky Country',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 1
   },
   {
-    title: 'More Fun in Mexico',
-    // filename: 'xxx.jpg',
-    post_url: 'https://nasa.gov/donec.json',
-    user_id: 2
-  },
-  {
-    title: 'An Excursion to El Salvador',
-    // filename: 'xxxx.jpg',
-    post_url: 'https://europa.eu/parturient/montes/nascetur/ridiculus/mus/etiam/vel.aspx',
-    user_id: 3
-  },
-  {
-    title: 'Passion in Paris',
-    // filename: 'xxxxx.jpg',
-    post_url: 'http://desdev.cn/enim/blandit/mi.jpg',
+    title: 'Bathing in the dead sea',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 4
   },
   {
-    title: 'Infatuated in Italy',
-    // filename: 'xxxxxx.jpg',
-    post_url: 'http://google.ca/nam/nulla/integer.aspx',
-    user_id: 5
-  },
-  {
-    title: 'No Malaise in Madrid',
-    // filename: 'xxxxxxx.jpg',
-    post_url: 'https://stanford.edu/consequat.png',
-    user_id: 6
-  },
-  {
-    title: 'Great Views in Greece',
-    // filename: 'xxxxxxxx.jpg',
-    post_url: 'http://edublogs.org/non/ligula/pellentesque.js',
+    title: 'Everest Base Camp Trek',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 7
   },
   {
-    title: 'Terrific Time in Tokyo',
-    // filename: 'xxxxxxxxx.jpg',
-    post_url: 'http://ucla.edu/consequat/nulla.html',
-    user_id: 8
+    title: 'Exploring Egypt',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
+    user_id: 4
   },
   {
-    title: 'Beautiful Bahama Beaches',
-    // filename: 'xxxxxxxxxx.jpg',
-    post_url: 'http://theguardian.com/dui/vel/nisl/duis/ac/nibh.aspx',
+    title: 'Australia Adventure',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
+    user_id: 1
+  },
+  {
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
+    user_id: 1
+  },
+  {
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 9
   },
   {
-    title: 'Fell in Love With London',
-    // filename: 'xxxxxxxxxxx.jpg',
-    post_url: 'https://reverbnation.com/ligula/sit.jpg',
-    user_id: 10
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
+    user_id: 5
   },
-
-// TEN POSTS ABOVE 
-
   {
-    title: 'In hac habitasse platea dictumst.',
-    post_url: 'http://china.com.cn/lectus/vestibulum.json',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 3
   },
   {
-    title: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.',
-    post_url: 'http://networksolutions.com/nam/ultrices/libero/non/mattis/pulvinar.json',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 10
   },
   {
-    title: 'Donec dapibus.',
-    post_url: 'https://instagram.com/ac/neque/duis/bibendum/morbi/non.xml',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 8
   },
   {
-    title: 'Nulla tellus.',
-    post_url: 'https://lycos.com/natoque/penatibus/et.html',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 3
   },
   {
-    title: 'Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.',
-    post_url: 'https://gmpg.org/lorem.jpg',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 3
   },
   {
-    title:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
-    post_url: 'https://paginegialle.it/mattis/egestas.jsp',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 7
   },
   {
-    title: 'In hac habitasse platea dictumst.',
-    post_url: 'http://wikia.com/turpis/eget.jpg',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 6
   },
   {
-    title: 'Etiam justo.',
-    post_url: 'https://shareasale.com/quis.json',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 4
   },
   {
-    title: 'Nulla ut erat id mauris vulputate elementum.',
-    post_url: 'http://java.com/diam/neque/vestibulum/eget/vulputate/ut/ultrices.png',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 6
   },
   {
-    title: 'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
-    post_url: 'https://java.com/at/nibh/in.png',
+    title: 'Fun in the sun',
+    description: 'Great Trip with Friends',
+	filename: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+	blog_body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum',
     user_id: 7
   }
 ];

@@ -1,0 +1,56 @@
+<article>
+
+  <div class="container is-fluid blogContainer">
+        <h2 class="head">Edit Your Blog</h2>
+    <div class="columns">
+      <div class="column is-three-fifths is-offset-one-fifth">
+
+        <a class="button" href="/dashboard"> &larr; Back to dashboard</a>
+        <h2 class="label">
+          Edit Title
+        </h2>
+        <form class="edit-post-form">
+          <div class="field">
+          <div class="control">
+            <input class="input" id="post-title" type="text" value="{{post.title}}" >
+          </div>
+          </div>
+          <h2 class="label">
+            Edit Description
+          </h2>
+          <div class="field">
+          <div class="control">
+            <input class="input" id="post-description" type="text" value="{{post.description}}" >
+          </div>
+          </div>
+          <h2 class="label">
+            Edit Body
+          </h2>
+          <div class="field">
+          <div class="control">
+            <textarea class="textarea" id="post-blog-body" rows = 10 >{{post.blog_body}}</textarea>
+          </div>
+          </div>
+           <div class="field-is-grouped">
+            <div class="control">
+            <input class="button edit-post-form" type="submit" value="Save post"></input>
+            </div>
+            <div class="control">
+            <input class="button delete-post-btn" type="submit" value="Delete post"></input>
+            </div>
+            </div>
+        </form>
+
+         
+
+
+      </div>
+    </div>
+  </div>
+</article>
+
+{{!-- {{> comments post.comments}} --}}
+<script src="/javascript/add-post.js"></script>
+<script src="/javascript/edit-posts.js"></script>
+<script src="/javascript/delete-post.js"></script>
+<script src="/javascript/comment.js"></script>

@@ -1,15 +1,19 @@
-    <section class="whole-page">
+   <section class="whole-page">
       <div class="container is-fluid">
+  <h2 class="head">Your Blogs</h2>
         <div class="columns is-desktop">
+
 
          <div class="container is-fluid mainCont">
     <div class="column is-12">
         <div class="columns is-multiline">
-         
-          <!-- CARD -->
-                
-                {{#each posts as |post|}}
-              <div class="column is-one-third">
+
+{{#if posts.length}}
+
+    {{#each posts as |post|}}
+
+      {{!-- {{> post-info post}} --}}
+      <div class="column is-one-third">
                 <div class="card blogCard">
                   <div class="card-image">
                     <figure class="image is-4by3">
@@ -31,21 +35,22 @@
                       <br />
                       <time> {{format_date_created_at}} </time>
                       <footer class="card-footer cardBtn">
-                        <a href= 'post/{{id}}' class="card-footer-item" id={{id}}>Read Blog</a>
+                        <a href= "/dashboard/edit/{{post.id}}" class="edit-link card-footer-item">Edit post</a>
                       </footer>
                     </div>
                   </div>
                 </div>    <!--END CARD-->
               </div>
-                {{/each}}
+      {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+    
+    {{/each}}
+
+</>
+{{/if}}
 
         </div>
     </div>
          </div>
         </div>
       </div>
-    </section>
-
-
-
-
+   </section>

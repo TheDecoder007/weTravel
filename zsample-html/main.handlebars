@@ -16,32 +16,13 @@
   </style>
 
 <body>
-      <section class="hero is-small">
-      <div class="hero-body">
-        <a href="/">
-        <img
-          src="https://i.imgur.com/XOqnGTY.png"
-          alt="weTravel logo"
-        />
-        </a>
-        
-        <h2 class="subtitle is-4 heroTitle2">
-          Blogs from travelers around the world
-        </h2>
-      </div>
-    </section>
-
-
-
- <div class="column is-narrow menu">
-   <section class="navSec">
+   <section>
        {{#if loggedIn}}
        <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="/">Home</a>
-            <a href="/myblogs">View My Blogs</a>
-            <a href="/createblog">Create A Blog</a>
-            <button id="logout" class="btn-no-style logoutBtn">Logout</button>
+            <a href="/Dashboard">View My Blogs</a>
+            <a href="#">Create A Blog</a>
+            <button id="logout" class="btn-no-style">logout</button>
         </div>
         {{else}}
         <div id="mySidenav" class="sidenav">
@@ -53,32 +34,38 @@
         <script>
           function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("main").style.opacity = 0.65;
           }
 
           function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.opacity = 1;
-
           }
         </script>
    </section> 
- </div>
-
-
-<main id="main">
-
+  <section class="hero is-small">
+      <div class="hero-body">
+        <img
+          src="https://i.imgur.com/XOqnGTY.png"
+          alt="weTravel logo"
+        />
+        
+        <h2 class="subtitle is-4 heroTitle2">
+          Blogs from travelers around the world
+        </h2>
+      </div>
+    </section>
+  <div class="wrapper">
+    <main>
       {{{ body }}}
-    
-</main>
- 
-    <footer class="container-fluid footer">
-      <p>Travel Well!</p>
+    </main>
+    <footer>
+      Thanks for visiting!
     </footer>
+  </div>
+
     {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
-    
+
 </body>
 
 </html>
