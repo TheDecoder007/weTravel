@@ -6,6 +6,9 @@ const { Post, User, Comment, Vote } = require('../models');
 router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
+    order: [
+      ['id', 'DESC']
+    ],
     attributes: [
       'id',
       'filename',
